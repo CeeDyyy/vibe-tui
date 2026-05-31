@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  vibe-dashboard:
+    # Tell Docker to build the image using the Dockerfile in this folder
+    build: .
+    # Map Windows port 8080 to the container's port 7681
+    ports:
+      - "8080:7681"
+    # Keep the container running in the background if it crashes
+    restart: unless-stopped
